@@ -1,0 +1,28 @@
+#payForm{
+	display:none;
+	width:80%;
+	margin:3vh auto;
+	.cvc{
+		width:75px;
+	}
+	.exp{
+		width:75px;
+	}
+	button{
+		margin:3vh;
+	}
+}
+.textcenter{
+	text-align:center;
+	width:80%;
+	margin:0 auto;
+	padding-top:45vh ;
+	height:100vh;
+	a,h1{
+		color:black;
+		align-self:center;
+	}
+	p{
+		margin-top: 5vh;
+	}
+}

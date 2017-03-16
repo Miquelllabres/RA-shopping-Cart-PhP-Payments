@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="dist/style.min.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,400" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  
+		<title>Aloha Apparel Co.</title>
+
+	</head>
+	<body>
+	<header >
+	
+				<div class="flex-navigator">
+				    <div class="logo"><img class="logos" src="images/aloha-logo.svg" alt="logo"></div>
+				 	<div class="navigator">
+					  	<ul class="nav">
+							<li><a href="#about">about</a></li>
+							<li><a href="#shop">shop</a></li>
+							<li><a href="#featured">featured</a></li>
+							<li><a href="#signup">updates</a></li>
+						</ul>
+					</div>
+ 				 	<div class="cart">
+ 				 	<img id="cartIcon" src="images/cart-icon.svg"  class="logos">
+ 				 	<input id="cartQty" type="text" name="cartIcon" value="0">
+
+
+ 				 	</div>
+				</div>
+
+			</header>
+		<main>
+
+			<!--BANNER-->
+				
+			<section id="about" class="banner text-align-center clearfix">
+				
+				<div class="cartcontainer">
+				<div class="cartItems">
+				<div class="shoppingCartHead">
+				<p></p>
+				<h1 class="blacktext uppercase">your cart</h1>
+				<p class="close blacktext">[X]</p>
+				</div>
+				<div class="viewCart">
+				</div>
+				<p class="total"></p>
+				<p class="cartText uppercase greytext">your cart is empty</p>
+				<div id="checkout">
+					<div><input id="clear" type="button" class="remove" value="clear"></div>
+					<!-- <div><input id="update" type="button" class="remove" value="update"></div> -->
+					<div>
+					
+					<input id="check" type="button" class="checkout" value="Checkout">
+					</div>
+					<div id="totalamount"></div>
+				</div>
+				</div>
+				<div id="payForm">
+					<form action="paymentform.php" method="POST" id="payment-form">
+							  <span class="payment-errors"></span>
+							 
+							  <div class="row">
+							    <label>
+							      <!-- <span>Card Number</span> -->
+							      <input type="text" data-stripe="number" class="Cnumber" 
+							      placeholder="Credit Card Number">
+							    </label>
+							 
+							 
+							 
+							    <label>
+							      <!-- <span>CVC</span> -->
+							      <input type="text" data-stripe="cvc" class="cvc"
+							      placeholder="cvc">
+							    </label>
+							 
+							 
+							  
+							    <label>
+							      <!-- <span>Exp(MM/YYYY)</span> -->
+							      <input type="text" data-stripe="exp-month" class="exp"
+							      placeholder="Exp MM">
+							      <input type="text" data-stripe="exp-year" class="exp"
+							      placeholder="Exp YY">
+							      <input type="hidden" name="TOTAL" id="Totalform" value="0">
+							    </label>
+							    
+							  </div>
+							 
+							  <button type="submit" id="buy" class="remove">Buy Now</button>
+					
+				
+			
+		        	
+						</form>
+		        	
+		        
+											
+				</div>
+
+				</div>
+
+<!-- Payments -->
+
+				
+		
+				
+				<div class="textshadow">
+				<h5 class="banner-text uppercase bottom-padding">want to buy</h5><h1 class="banner-text letter-space uppercase">cool from best buy? </h1>
+				<a href="#shop">
+				<input type="submit" class="clickhere uppercase marginxs" value="Click here">
+				</a>
+				</div>
+				
+			</section>
+
+
+			<!--CTA SECTION-->
+			
+			<section class="text-align-center">
+			
+
+				<h2 class="top-padding thin blacktext">Have you ever wanted to <span class="greentext bold">buy something?</span></h2>
+				<div>
+					<p class="blacktext thin  margin-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan, ligula ac convallis euismod, <br class=" desktop">mauris ex posuere sapien, vitae consequat nisl lectus ac eros. Nullam bibendum vehicula nunc ac mattis <!--  </p>
+				</div>
+
+			</section>
+
+			<!--FEATURED-->
+			<section>
+				<div id="featured" class="products-container">
+					  <div class="flex-1 mens category"><div class="text-mobile uppercase center-text">laptops / ultrabooks</div></div>
+					  <div class="flex-2 trends category"><div class="text-mobile uppercase center-text">4k tv's</div></div>
+					  <div class="flex-2 glasses category "><div class="text-mobile uppercase center-text">home audio</div></div> 
+					  <div class="flex-2 sale category "><div class="text-mobile uppercase center-text">tablets</div></div>
+					  <div class="flex-2 bags category "><div class="text-mobile uppercase center-text">desktops</div></div>
+					  <div class="flex-1 womens category"><div class="text-mobile uppercase center-text">cellphones</div></div>  
+				</div>
+
+			</section>
+
+			<!--PRODUCTS SECTION-->
+			<section id="shop" class="bottom-padding text-align-center clearfix ">
+				<h2 class="top-padding  bottom-padding blacktext thin">YOU LIKE STUFF?</h2>
+				<p class="uppercase greytext bottom-padding">we got stuff</p>
+				<div>
+
+				<!-- MODAL WINDOW -->
+				<div id="myModal" class="modal">
+
+				  <!-- WINDOW CONTENT -->
+				  <div class="modal-content">
+				  <img>
+				    <span class="closep">[×]</span>
+				    <div id="content">
+				    	
+                   
+                      <img class='QVimage'>
+                      <hr>
+                   
+                   <div class=" textcenter">
+                   	<p class="greytext marginxs"></p>
+                       <h3 class="black"></h3>  
+                       <p class="greentext marginxs"></p>
+                       <button class="addtocart" id="QVaddtoCart" type="button">Add to cart</button>
+                   </div>
+                 </div>
+				   
+				    <!-- <ul id="shoppingCartContent">
+				        <li></li>
+				    </ul>  -->
+				  </div>
+
+				</div>
+
+				<!-- CAROUSEL -->
+				
+			<div  class="owl-carousel owl-theme"></div>
+			<!-- <p class="addedProductCart uppercase">the product has been added to the cart</p> -->
+			</div>
+			</section>
+
+			<!--SUBSCRIBE FORM-->
+
+			<section id="signup" class="text-align-center">
+
+				<h2 class="top-padding bottom-padding thin">WANT TO GET CONSTANT UPDATES?</span></h2>
+				<p class="bottom-padding thin bold uppercase">Give us your mail and we won't stop emailing you</p>
+				<p class="message uppercase">Thanks for Subscribing!!!</p>
+				<div id="form" class="sub-form clearfix"> 
+					<input type="email" placeholder="Your Email"  class="email left" >
+					<input type="submit" value="SUMBIT" class="button bold right">
+				</div>
+
+
+			</section>
+			
+		</main>
+
+		<!--FOOTER-->
+		<footer class="top clear"> 
+			<div class="wrapper">
+   				 <div id="one" class="social">
+	   				<address>
+					<p class="address-padding">&copy; 2016 Aloha Apparel Co.<br>Powered bt HTML and CSS.</p>
+					<p class="address-padding">604-604-6040.
+					<a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></p>
+					<p>1490 W Broadway<br>Vancouver,BC,Canada</p>			
+					</address>
+				</div>
+    			<div id="two" class="social">
+	   				 <ul>
+						<li><a href="#" class="textdecoration"><i class="fa fa-facebook facebook"></i><span class="hide">Facebook</span></a></li>
+						<li><a href="#" class="textdecoration "><i class="fa fa-twitter twitter"></i><span class="hide">Twitter</span></a></li>
+						<li><a href="#" class="textdecoration"><i class="fa fa-instagram instagram"></i><span class="hide">Instagram</span></a></li>
+						<li><a href="#" class="textdecoration"><i class="fa fa-pinterest pinterest"></i><span class="hide">Pinterest</span></a></li>
+						<li><a href="#" class="textdecoration"><i class="fa fa-google-plus google"></i><span class="hide">Google+</span></a></li>
+					</ul>
+				</div>
+  			</div>
+  			<div id="overlay"></div>
+  			
+
+		</footer>
+		<script src="src/js/main.js"></script>
+  			<script src="slider/owl.carousel.min.js"></script>
+  			<script src="build/bundle.js"></script>
+  			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  			<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+   
+        Stripe.setPublishableKey('pk_test_hqzg2owgGvrmu3ysVLZICEGV');
+    
+</script>
+  			
+		
+	</body>
+</html>	
+
+		
