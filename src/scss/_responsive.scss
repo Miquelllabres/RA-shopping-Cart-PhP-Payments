@@ -29,7 +29,7 @@ main{
 /***shoppingCart*****/
 
 .cartItems{
-	height:30vh;
+	min-height:30vh;
 	.qty{
 		height: 20px;
 		width: 50px !important;
@@ -232,7 +232,7 @@ li{
 }
 
 	.cartItems{
-	height:35vh;
+	min-height:45vh;
 	.qty{
 		height: 20px;
 		width: 50px !important;

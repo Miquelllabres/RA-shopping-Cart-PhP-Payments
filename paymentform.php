@@ -1,5 +1,6 @@
-// <?php // Set your secret key: remember to change this to your live secret key in production
+<?php // Set your secret key: remember to change this to your live secret key in production
 // See your keys here: https://dashboard.stripe.com/account/apikeys
+
 require_once('./config.php');
 // Token is created using Stripe.js or Checkout!
 // Get the payment token submitted by the form:
@@ -29,3 +30,8 @@ $charge = \Stripe\Charge::create(array(
   	</div>
 	</body>
 </html>
+
+
+
+<!-- echo "im here ";
+die(); -->
